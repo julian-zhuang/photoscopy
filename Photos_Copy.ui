@@ -14,6 +14,21 @@
    <string>Photos_Copy</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_4">
+   <property name="leftMargin">
+    <number>2</number>
+   </property>
+   <property name="topMargin">
+    <number>2</number>
+   </property>
+   <property name="rightMargin">
+    <number>2</number>
+   </property>
+   <property name="bottomMargin">
+    <number>2</number>
+   </property>
+   <property name="spacing">
+    <number>2</number>
+   </property>
    <item row="0" column="0">
     <widget class="QSplitter" name="splitter">
      <property name="sizePolicy">
@@ -53,7 +68,7 @@
          <item>
           <widget class="QLineEdit" name="lineEdit_SourcePath">
            <property name="text">
-            <string>/home/julian/Desktop/10100725</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -146,7 +161,7 @@
          <item>
           <widget class="QLineEdit" name="LineEdit_TargetPath">
            <property name="text">
-            <string>/run/media/julian/1AE1-6333</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -200,6 +215,9 @@
    </item>
    <item row="5" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="spacing">
+      <number>2</number>
+     </property>
      <item>
       <widget class="QLabel" name="label_FileName">
        <property name="text">
@@ -224,6 +242,19 @@
       <widget class="QCheckBox" name="checkBox_DeleteDourceFile">
        <property name="text">
         <string>Delete source file</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_License">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>License</string>
        </property>
       </widget>
      </item>

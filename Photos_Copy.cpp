@@ -8,6 +8,7 @@
 #include <QDebug>
 #include <QDateTime>
 #include <QTimer>
+#include "LICENSE.h"
 
 Photos_Copy::Photos_Copy(QWidget *parent)
     : QWidget(parent)
@@ -19,6 +20,7 @@ Photos_Copy::Photos_Copy(QWidget *parent)
 
     connect(ui->pushButton_Stop, &QPushButton::clicked, this, &Photos_Copy::Slot_BtnClick);
     connect(ui->pushButton_Start, &QPushButton::clicked, this, &Photos_Copy::Slot_BtnClick);
+    connect(ui->pushButton_License, &QPushButton::clicked, this, &Photos_Copy::Slot_BtnClick);
     connect(ui->pushButton_RefreshIndex, &QPushButton::clicked, this, &Photos_Copy::Slot_BtnClick);
     connect(ui->pushButton_SelectTargetPath, &QPushButton::clicked, this, &Photos_Copy::Slot_BtnClick);
     connect(ui->pushButton_SlelctSourcePath, &QPushButton::clicked, this, &Photos_Copy::Slot_BtnClick);
@@ -46,6 +48,11 @@ void Photos_Copy::Slot_BtnClick()
         m_CopyThreadRunning = true;
         auto ThreadPtr = new std::thread(&Photos_Copy::CopyThread, this);
         ThreadPtr->detach();
+        return;
+    }
+    if (Btn == ui->pushButton_License){
+        LICENSE License(this);
+        License.exec();
         return;
     }
     if (Btn == ui->pushButton_Stop){

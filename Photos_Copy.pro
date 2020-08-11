@@ -17,19 +17,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 LIBS += -lexiv2
 
+TARGET = PhotosCopy
+
 SOURCES += \
     ExivInfo.cpp \
+    LICENSE.cpp \
     main.cpp \
     Photos_Copy.cpp
 
 HEADERS += \
     ExivInfo.h \
+    LICENSE.h \
     Photos_Copy.h
 
 FORMS += \
+    LICENSE.ui \
     Photos_Copy.ui
-
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
